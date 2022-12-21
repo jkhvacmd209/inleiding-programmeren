@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Solar System Simulator | Inleiding Programmeren</title>
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="icon" href="/img/favicon.png">
+</head>
+<body>
+	<div class="simulation">
+		<!-- afbeeldingen van https://nineplanets.org/-->
+		<img src="/img/sun.png" alt="sun" class="sun">
+		<img src="/img/mercury.png" alt="mercury" class="mercury">
+		<img src="/img/venus.png" alt="venus" class="venus">
+		<img src="/img/earth.png" alt="earth" class="earth">
+		<img src="/img/mars.png" alt="mars" class="mars">
+		<img src="/img/jupiter.png" alt="jupiter" class="jupiter">
+		<img src="/img/saturn.png" alt="saturn" class="saturn">
+		<img src="/img/uranus.png" alt="uranus" class="uranus">
+		<img src="/img/neptune.png" alt="neptune" class="neptune">
+	</div>
+
+	<div class="controls">
+		<!-- icoontjes van Google Fonts -->
+		<div class="controls__set-today">
+			<button id="set-today"><img src="/img/today-icon.svg" alt="set today"></button>
+			<label>Set Today</label>
+		</div>
+		<div class="controls__date">
+			<input id="date-field" type="date" value="2000-01-01" min="2000-01-01" max="2100-01-01">
+			<label>Date</label>
+		</div>
+		<div class="controls__play">
+			<button id="play-button"><img src="/img/play-icon.svg" alt="play button"></button>
+			<label>Play</label>
+		</div>
+		<div class="controls__speed">
+			<input id="speed-field" type="number" max="10" min="-10" value="1">
+			<label>Speed</label>
+		</div>
+	</div>
+
+	<div class="timeline">
+		<input id="timeline" type="range" min="946684800000" max="4102444800000" value="946684800000" step="86400000">
+	</div>
+
+	<div class="info">
+	</div>
+
+	<script type="text/javascript" src="/js/script.js"></script>
+</body>
+</html>

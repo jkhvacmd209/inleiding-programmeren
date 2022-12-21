@@ -1,0 +1,217 @@
+/* Roboto font van Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-image: url(/img/background.jpg);
+	background-size: cover;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
+	position: relative;
+}
+
+
+/* Styling informatie scherm */
+
+h1 {
+	font-family: 'Roboto', sans-serif;
+	text-transform: capitalize;
+	margin-bottom: 1rem;
+}
+
+p {
+	font-family: 'Roboto', sans-serif;
+	margin-bottom: 2rem;
+}
+
+.info {
+	position: fixed;
+	width: 60vw;
+	height: 60vh;
+	top: 40%;
+	left: 50%;
+	margin-left: -30vw;
+	margin-top: -30vh;
+	background-color: #fffc;
+	backdrop-filter: blur(5px);
+	border-radius: 16px;
+	border: .5px solid #777;
+	display: none;
+	align-items: center;
+	padding: 2rem;
+}
+
+.info div {
+	width: 100%;
+}
+
+.info img {
+	width: 80%;
+	margin: auto;
+}
+
+.show {
+	display: flex;
+}
+
+#close-button {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	font-size: 3rem;
+	background: none;
+	border: none;
+}
+
+table {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;
+}
+
+th {
+	font-size: 1.2rem;
+	width: calc(100%/3);
+	padding: .5rem;
+}
+
+table span {
+	font-size: 1.4rem;
+}
+
+td {
+	font-size: .8rem;
+	vertical-align: top;
+	padding: .5rem;
+	line-height: 1.2;
+}
+
+
+/* Styling Controls */
+
+.controls {
+	position: fixed;
+	bottom: 70px;
+	width: 100vw;
+	display: flex;
+	z-index: 3;
+	justify-content: center;
+	gap: 10px;
+}
+
+.timeline {
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	z-index: 3;
+}
+
+.controls div {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.controls button, .controls input {
+	height: 40px;
+	border-radius: 5px;
+	border: .5px solid #777;
+	background: #fffc;
+	backdrop-filter: blur(5px);
+	font-family: monospace;
+	padding: 5px 20px;
+}
+
+.controls img {
+	height: 100%;
+}
+
+.controls__speed:after {
+	content: 'M/s';
+	position: absolute;
+	right: 40px;
+	top: 20px;
+	transform: translateY(-50%);
+	font-family: monospace;
+}
+
+.controls__speed input {
+	width: 128px;
+}
+
+.timeline input[type="range"] {
+	-webkit-appearance: none;
+	width: calc(100% - 20px);
+	height: 50px;
+	background-color: #fffc;
+	backdrop-filter: blur(5px);
+	border-radius: 16px;
+	border: .5px solid #777;
+	margin: 10px;
+	padding: 16px;
+}
+
+.timeline input[type="range"]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 5px;
+	height: 30px;
+	background: #000;
+	cursor: pointer;
+	border-radius: 2.5px;
+}
+
+label {
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	margin-top: 5px;
+}
+
+
+/* Styling simulatie */
+
+.simulation {
+	perspective: 1000px;
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.simulation img {
+	position: absolute;
+	aspect-ratio: 1;
+	filter: brightness(1.2);
+}
+
+.sun {
+	width: 100px;
+}
+
+.mercury {
+	width: 20px;
+}
+
+.venus, .mars {
+	width: 30px;
+}
+
+.earth {
+	width: 35px;
+}
+
+.jupiter, .saturn {
+	width: 60px;
+}
+
+.uranus, .neptune {
+	width: 40px;
+}
